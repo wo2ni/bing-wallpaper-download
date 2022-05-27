@@ -7,6 +7,7 @@ all:
 
 install:
 	cp -v bing-wallpaper /usr/bin
+	cp -v 
 
 .PHONY: clean
 clean:

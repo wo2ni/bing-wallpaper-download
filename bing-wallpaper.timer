@@ -1,0 +1,9 @@
+[Unit]
+Description="Auto Download Bing wallpaper Timer"
+
+[Timer]
+OnUnitActiveSec=1h
+Unit=bing-wallpaper.service
+
+[Install]
+WantedBy = timers.target
