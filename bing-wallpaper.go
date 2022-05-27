@@ -14,6 +14,8 @@ import (
     "github.com/PuerkitoBio/goquery"
 )
 
+//大陆内会将www.bing.com解析为:https//s.cn.bing.net/
+//大陆外不受影响;
 const bingURL = "https://www.bing.com"
 
 //从Bing获取壁纸链接.
@@ -40,7 +42,8 @@ func fetchWallpaperLink() (string, error) {
         return "", errors.New("Could not find #preloadBg element on Bing. Cannot fetch wallpaper link")
     }
 
-    return fmt.Sprintf("%s%s", bingURL, link), nil
+    //return fmt.Sprintf("%s%s", bingURL, link), nil    //非大陆外,返回: bingURL link;
+    return fmt.Sprintf("%s", link), nil             //大陆内只需要返回: link;
 }
 
 //返回壁纸链接的文件名.
