@@ -2,14 +2,14 @@
 
 ## Arch Linux
 
-### 从AUR安装.
+### 从AUR安装(2选1).
 
 ```
 yay -Syy bing-wallpaper-download        #国际用户.
 yay -Syy bing-wallpaper-download-cn     #大陆用户.
 ```
 
-* **手工构建.**
+* **手工构建(2选1).**
 
 ```
 pacman -Syy git
