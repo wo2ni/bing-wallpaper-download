@@ -19,7 +19,7 @@ makepkg -s
 
 ## 手动编译安装(适用与Debian,Fedora,RHEL系列发行版等).
 
-* **大陆内会将www.bing.com解析为:https//s.cn.bing.net**
+* **注意!!大陆内会将www.bing.com解析为:https//s.cn.bing.net**
 
 ### 编译国际版本.
 
