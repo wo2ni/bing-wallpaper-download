@@ -2,9 +2,10 @@
 
 ## 手动编译.
 ```
-export GO111MODULE=on
-go get github.com/PuerkitoBio/goquery
+$ export GO111MODULE=on
+$ go get github.com/PuerkitoBio/goquery
 $ make
+$ sudo make install
 ```
 
 ## 用法
