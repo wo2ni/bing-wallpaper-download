@@ -4,7 +4,8 @@
 ```
 $ export GO111MODULE=on
 $ go get github.com/PuerkitoBio/goquery
-$ make
+$ make app      #构建不同架构版本.
+$ make          #仅构建Linux版本.
 $ sudo make install
 ```
 
