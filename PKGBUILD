@@ -8,7 +8,7 @@ pkgname=(
 )
 pkgver=0.1
 pkgrel=1
-pkgdesc="Bing wallpaper Download."
+pkgdesc="Automatic daily download of Bing wallpapers"
 arch=(
     'x86_64'
     'i686'
@@ -23,9 +23,13 @@ depends=('glibc' 'feh')
 makedepends=('go')
 install="${pkgname}.install"
 
-source=("git+${url}.git")
+source=(
+        "git+${url}.git"
+        "${pkgbase}.install"
+)
 
-sha256sums=('SKIP')
+sha256sums=('SKIP'
+            '53ccca643c0554fcf610437fbf0c6c18adee3f5c9bc1e111fe05a8a9b720d33d')
 
 build() {
     cd "${srcdir}/${pkgbase}"
