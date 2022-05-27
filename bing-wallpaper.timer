@@ -7,3 +7,4 @@ Unit=bing-wallpaper.service
 
 [Install]
 WantedBy = timers.target
+
