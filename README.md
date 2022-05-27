@@ -21,20 +21,28 @@ makepkg -s
 
 * **注意!!大陆内会将www.bing.com解析为:https//s.cn.bing.net**
 
-### 编译国际版本.
+### 编译安装国际版本.
 
 ```
 $ make app      #构建不同架构版本.
 $ make          #仅构建Linux版本.
 $ sudo make install
+$ cp -v *{service,timer} /etc/systemd/system
+$ mkdir -p /usr/local/share/wallpaper/
+$ systemctl daemon-reload
+$ systemctl enable --now bing-wallpaper.timer
 ```
 
-### 编译大陆版本.
+### 编译安装大陆版本.
 ```
 sed -i 's/return fmt.Sprintf("%s%s", bingURL, link), nil/return fmt.Sprintf("%s", link), nil/g' bing-wallpaper.go
 $ make app      #构建不同架构版本.
 $ make          #仅构建Linux版本.
 $ sudo make install
+$ cp -v *{service,timer} /etc/systemd/system
+$ mkdir -p /usr/local/share/wallpaper/
+$ systemctl daemon-reload
+$ systemctl enable --now bing-wallpaper.timer
 ```
 
 
