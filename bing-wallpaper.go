@@ -42,8 +42,8 @@ func fetchWallpaperLink() (string, error) {
         return "", errors.New("Could not find #preloadBg element on Bing. Cannot fetch wallpaper link")
     }
 
-    //return fmt.Sprintf("%s%s", bingURL, link), nil    //非大陆外,返回: bingURL link;
-    return fmt.Sprintf("%s", link), nil             //大陆内只需要返回: link;
+    return fmt.Sprintf("%s%s", bingURL, link), nil    //非大陆外,返回: bingURL link;
+    //return fmt.Sprintf("%s", link), nil             //大陆内只需要返回: link;
 }
 
 //返回壁纸链接的文件名.
