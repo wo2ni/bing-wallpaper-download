@@ -25,7 +25,7 @@ makepkg -s
 
 ```
 $ make app      #构建不同架构版本.
-$ make          #仅构建Linux版本.
+$ make -j $(nproc)          #仅构建Linux版本.
 $ sudo make install
 $ cp -v *{service,timer} /etc/systemd/system
 $ mkdir -p /usr/local/share/wallpaper/
@@ -37,7 +37,7 @@ $ systemctl enable --now bing-wallpaper.timer
 ```
 $ sed -i 's/return fmt.Sprintf("%s%s", bingURL, link), nil/return fmt.Sprintf("%s", link), nil/g' bing-wallpaper.go
 $ make app      #构建不同架构版本.
-$ make          #仅构建Linux版本.
+$ make -j $(nproc)          #仅构建Linux版本.
 $ sudo make install
 $ cp -v *{service,timer} /etc/systemd/system
 $ mkdir -p /usr/local/share/wallpaper/
