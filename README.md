@@ -1,29 +1,24 @@
-# Simple Bing Wallpaper Downloader in Go
+# Golang 简单必应每日壁纸下载器.
 
-Learning Go, so decided to make something that could download nice wallpaper for me.
-
-Set it as a cron job, and immerse yourself with new backgrounds.
-
-## Compiling this stuff
+## 手动编译.
 ```
 export GO111MODULE=on
 go get github.com/PuerkitoBio/goquery
 $ make
 ```
 
-## Usage
+## 用法
 ```
-# Saves current wallpaper to ~/Pictures
-$ bing-wallpaper -output-dir ~/Pictures
+# 保存图片到 ~/Pictures
+$ bing-wallpaper -o ~/Pictures
 
 # Saves wallpaper with a custom filename
-$ bing-wallpaper -output-dir ~/Pictures -filename wallpaper1
+# 使用自定义文件名保存壁纸.
+$ bing-wallpaper -o ~/Pictures -filename wallpaper1
 ```
 
-## Copyright stuff
+## 版权相关.
 
-All the wallpaper downloaded by this is from Bing, not me.
-
-Pictures are copyrights of the individual picture taker.
-
-Please don't come after me D:
+此下载的所有壁纸都来自必应,而不是我.
+图片是个人图片拍摄者的版权.
+请勿用于商业用途.
