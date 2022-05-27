@@ -117,13 +117,12 @@ func main() {
     //图片保存路径: *dest
     //图片名称:filename
     //图片地址:link
-    //dest := flag.String("output-dir", "", "Output directory to save wallpaper to")
     dest := flag.String("o", "", "Output directory to save wallpaper to")
-    overrideFilename := flag.String("filename", "", "Name to give the wallpaper picture. Extension is automatically added.")
+    overrideFilename := flag.String("f", "", "Name to give the wallpaper picture. Extension is automatically added.")
     flag.Parse()
 
     if *dest == "" {
-        log.Fatal("You must provide an output directory using the -output-dir flag")
+        log.Fatal("You must provide an output directory using the -o flag")
     }
 
     link, err := fetchWallpaperLink()
