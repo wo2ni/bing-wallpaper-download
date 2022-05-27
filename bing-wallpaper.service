@@ -8,3 +8,4 @@ ExecStart=/usr/local/bin/bing-wallpaper
 
 [Install]
 WantedBy=multi-user.target
+
