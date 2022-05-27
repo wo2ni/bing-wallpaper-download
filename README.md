@@ -10,10 +10,12 @@ $ sudo make install
 
 ## 用法
 ```
+# 查看使用方法.
+$ bing-wallpaper -h
+
 # 保存图片到 ~/Pictures
 $ bing-wallpaper -o ~/Pictures
 
-# Saves wallpaper with a custom filename
 # 使用自定义文件名保存壁纸.
 $ bing-wallpaper -o ~/Pictures -filename wallpaper1
 ```
